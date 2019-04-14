@@ -91,7 +91,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         //Se llaman y referencian a las partes de mi interfaz
         //Botones, textviews
         val boton: ImageButton = findViewById<ImageButton>(R.id.BotonEstrella)
-        val ingresado: EditText = findViewById(R.id.NombreIngresado)
+        val ingresado: EditText = findViewById<EditText>(R.id.NombreIngresado)
         val resultado: TextView = findViewById<TextView>(R.id.Resultado)
         val nombre: TextView = findViewById<TextView>(R.id.EtiquetaNombre)
         //Contador para la deshabilitacion de las partes indicadas

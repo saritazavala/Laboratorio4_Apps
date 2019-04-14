@@ -5,12 +5,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Tikal">
+        tools:context=".About">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/datosTikal" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="271dp"
-            android:layout_marginStart="109dp" android:textSize="18sp"/>
 </android.support.constraint.ConstraintLayout>
