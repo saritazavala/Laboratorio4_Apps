@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import kotlinx.android.synthetic.main.activity_informacion.*
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.app_bar_menu.*
 
@@ -62,24 +63,23 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_info -> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
+            R.id.nav_Antigua -> {
+                abrirAntigua()
 
             }
-            R.id.nav_slideshow -> {
+            R.id.nav_Semuc ->
+            {
+                abrirSemuc()
 
             }
-            R.id.nav_manage -> {
-
+            R.id.nav_Tikal -> {
+                abrirBotonTikal()
             }
-            R.id.nav_share -> {
 
-            }
-            R.id.nav_send -> {
 
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
@@ -87,7 +87,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
     //Funcion para mostrar, habilitary deshabilitar los texts
 
-    fun mostrarTexto(view: View) {
+    fun mostrarTexto() {
         //Se llaman y referencian a las partes de mi interfaz
         //Botones, textviews
         val boton: ImageButton = findViewById<ImageButton>(R.id.BotonEstrella)
@@ -121,7 +121,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
 
     //https://medium.com/@jencisov/androids-data-binding-with-kotlin-df94a24ffc0f
-    fun abrirBotonTikal(view: View) {
+    fun abrirBotonTikal() {
 
         val intento: Intent = Intent(this, Informacion::class.java)
         intento.putExtra(
@@ -137,7 +137,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
 
 
-    fun abrirSemuc(view: View) {
+    fun abrirSemuc() {
         val intento: Intent = Intent(this, Informacion::class.java)
         intento.putExtra(
             "Descripcion",
@@ -151,7 +151,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
     }
 
-    fun abrirAntigua(view: View) {
+    fun abrirAntigua() {
         val intento: Intent = Intent(this, Informacion::class.java)
         intento.putExtra(
             "Descripcion", Descripcion(
@@ -165,7 +165,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         startActivity(intento)
     }
 
-    fun backear(view: View) {
+    fun backear() {
         val boton: Button = findViewById<Button>(R.id.back)
         val ingresdo: TextView = findViewById<TextView>(R.id.ComentarioIngresado)
         boton.setOnClickListener {

@@ -8,8 +8,8 @@
         tools:context=".MainActivity">
     <Button
             android:text="Get In!"
-            android:layout_width="156dp"
-            android:layout_height="92dp"
+            android:layout_width="129dp"
+            android:layout_height="67dp"
             android:id="@+id/Empezar" android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" android:layout_marginBottom="181dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,9 @@
             android:text="Guatemala App"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/titulo" android:textSize="50sp"
+            android:id="@+id/titulo" android:textSize="30sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/imageView2"
             android:layout_marginTop="43dp" android:layout_marginStart="16dp"
-            android:layout_marginBottom="9dp" app:layout_constraintBottom_toTopOf="@+id/imageView2"/>
+            android:layout_marginBottom="9dp" app:layout_constraintBottom_toTopOf="@+id/imageView2"
+    />
 </android.support.constraint.ConstraintLayout>
