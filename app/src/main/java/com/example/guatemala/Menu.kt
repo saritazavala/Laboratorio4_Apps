@@ -64,7 +64,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_info -> {
-                // Handle the camera action
+                abrirInfo()
             }
             R.id.nav_Antigua -> {
                 abrirAntigua()
@@ -85,9 +85,15 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    fun abrirInfo(){
+        val intento: Intent = Intent(this, About ::class.java)
+        startActivity(intento)
+
+    }
     //Funcion para mostrar, habilitary deshabilitar los texts
 
-    fun mostrarTexto() {
+    fun mostrarTexto(view: View) {
         //Se llaman y referencian a las partes de mi interfaz
         //Botones, textviews
         val boton: ImageButton = findViewById<ImageButton>(R.id.BotonEstrella)
