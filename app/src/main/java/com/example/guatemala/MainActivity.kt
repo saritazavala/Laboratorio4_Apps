@@ -16,12 +16,12 @@ class MainActivity : AppCompatActivity() {
     }
      fun empezar(view: View){
          val boton: Button = findViewById<Button>(R.id.Empezar)
-         boton.setOnClickListener{
-             val intento: Intent = Intent(this, Menu::class.java)
-             startActivity(intento)
-         }
+         val intento: Intent = Intent(this, Menu::class.java)
+         startActivity(intento)
+
 
      }
+
 
     fun mostrarTexto(view: View) {
         //Se llaman y referencian a las partes de mi interfaz

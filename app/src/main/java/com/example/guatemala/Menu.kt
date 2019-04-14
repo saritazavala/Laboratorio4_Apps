@@ -50,7 +50,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+   /* override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -58,7 +58,7 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.action_settings -> return true
             else -> return super.onOptionsItemSelected(item)
         }
-    }
+    }*/
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
@@ -180,5 +180,17 @@ class Menu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             val intento: Intent = Intent(this, MainActivity::class.java)
             startActivity(intento)
         }
+    }
+    fun compartir(view: View){
+        val ingresdo: TextView = findViewById<TextView>(R.id.ComentarioIngresado)
+        val intento: Intent = Intent(this, Comentario::class.java)
+        intento.putExtra(
+            "Descripcion",
+            Descripcion(
+                "Comentario Compartido",ingresdo.text.toString() ,"Gracias por compartir!"
+            )
+        )
+        startActivity(intento)
+
     }
 }
